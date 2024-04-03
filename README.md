@@ -13,7 +13,7 @@ Este projeto apresenta uma série de desafios, incluindo trabalhar com APIs, cri
 Parte crucial do desafio envolve a configuração e instalação de bancos de dados Postgres e o Redis, este último desempenhando um papel vital como mediador. O uso do executor Celery também é um ponto focal, exigindo um entendimento aprofundado de seus componentes principais, incluindo filas de tarefas e a configuração de worker concurrency. Abordando a funcionalidade dos pools, definindo a quantidade máxima de tarefas que podem ser executadas em paralelo.
 
 ###### Imagem 2: Grid View - Visualização da execução do DAG
-<img src="/img/pipeline-de-agregacao.png">
+<img src="/img/002-visualizacao-execucao-dag.png">
 
 
 ## 📄Conhecimentos Desenvolvidos
