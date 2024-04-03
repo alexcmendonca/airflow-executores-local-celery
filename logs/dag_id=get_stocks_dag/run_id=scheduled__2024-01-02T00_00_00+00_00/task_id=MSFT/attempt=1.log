@@ -1,0 +1,72 @@
+[2024-04-02 12:56:10,387] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.MSFT scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-04-02 12:56:10,399] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.MSFT scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-04-02 12:56:10,399] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 12:56:10,399] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 12:56:10,400] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 12:56:10,422] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): MSFT> on 2024-01-02 00:00:00+00:00
+[2024-04-02 12:56:10,427] {standard_task_runner.py:52} INFO - Started process 7792 to run task
+[2024-04-02 12:56:10,443] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'MSFT', 'scheduled__2024-01-02T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmp_d32gtfi', '--error-file', '/tmp/tmpgqbl2cw9']
+[2024-04-02 12:56:10,445] {standard_task_runner.py:80} INFO - Job 8: Subtask MSFT
+[2024-04-02 12:56:10,629] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.MSFT scheduled__2024-01-02T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 12:56:10,715] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=MSFT
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-02T00:00:00+00:00
+[2024-04-02 12:56:11,641] {history.py:222} ERROR - MSFT: No price data found, symbol may be delisted (1h 2024-01-01 -> 2024-01-02)
+[2024-04-02 12:56:11,660] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 12:56:11,684] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_stocks_dag, task_id=MSFT, execution_date=20240102T000000, start_date=20240402T155610, end_date=20240402T155611
+[2024-04-02 12:56:11,735] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 12:56:11,769] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-02 17:41:27,371] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.MSFT scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-04-02 17:41:27,385] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.MSFT scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-04-02 17:41:27,385] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:41:27,385] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 17:41:27,385] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:41:27,399] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): MSFT> on 2024-01-02 00:00:00+00:00
+[2024-04-02 17:41:27,408] {standard_task_runner.py:52} INFO - Started process 17703 to run task
+[2024-04-02 17:41:27,414] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'MSFT', 'scheduled__2024-01-02T00:00:00+00:00', '--job-id', '251', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmp293fsfxf', '--error-file', '/tmp/tmp50r508ep']
+[2024-04-02 17:41:27,415] {standard_task_runner.py:80} INFO - Job 251: Subtask MSFT
+[2024-04-02 17:41:27,837] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.MSFT scheduled__2024-01-02T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 17:41:28,888] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=MSFT
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-02T00:00:00+00:00
+[2024-04-02 17:41:30,617] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/alexmend/Documents/airflowalex/dags/get_stocks.py", line 18, in get_history
+    yfinance.Ticker(ticker).history(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/utils.py", line 103, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/base.py", line 77, in history
+    return self._lazy_load_price_history().history(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/utils.py", line 103, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/scrapers/history.py", line 226, in history
+    logger.debug(f'{self.ticker}: yfinance received OHLC data: {quotes.index[0]} -> {quotes.index[-1]}')
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 5389, in __getitem__
+    return getitem(key)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/arrays/datetimelike.py", line 379, in __getitem__
+    result = cast("Union[Self, DTScalarOrNaT]", super().__getitem__(key))
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/arrays/_mixins.py", line 284, in __getitem__
+    result = self._ndarray[key]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+[2024-04-02 17:41:30,696] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=get_stocks_dag, task_id=MSFT, execution_date=20240102T000000, start_date=20240402T204127, end_date=20240402T204130
+[2024-04-02 17:41:30,808] {standard_task_runner.py:92} ERROR - Failed to execute job 251 for task MSFT (index 0 is out of bounds for axis 0 with size 0; 17703)
+[2024-04-02 17:41:30,850] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-04-02 17:41:30,983] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

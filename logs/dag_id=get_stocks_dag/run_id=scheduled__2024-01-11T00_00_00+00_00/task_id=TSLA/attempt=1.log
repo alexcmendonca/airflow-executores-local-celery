@@ -1,0 +1,163 @@
+[2024-04-02 12:59:03,361] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.TSLA scheduled__2024-01-11T00:00:00+00:00 [queued]>
+[2024-04-02 12:59:03,371] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.TSLA scheduled__2024-01-11T00:00:00+00:00 [queued]>
+[2024-04-02 12:59:03,371] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 12:59:03,371] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 12:59:03,371] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 12:59:03,389] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): TSLA> on 2024-01-11 00:00:00+00:00
+[2024-04-02 12:59:03,407] {standard_task_runner.py:52} INFO - Started process 8548 to run task
+[2024-04-02 12:59:03,413] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'TSLA', 'scheduled__2024-01-11T00:00:00+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmpj7k4em4r', '--error-file', '/tmp/tmpoxvv0aze']
+[2024-04-02 12:59:03,414] {standard_task_runner.py:80} INFO - Job 38: Subtask TSLA
+[2024-04-02 12:59:03,497] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.TSLA scheduled__2024-01-11T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 12:59:03,586] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=TSLA
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-11T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-11T00:00:00+00:00
+[2024-04-02 12:59:04,367] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 12:59:04,378] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_stocks_dag, task_id=TSLA, execution_date=20240111T000000, start_date=20240402T155903, end_date=20240402T155904
+[2024-04-02 12:59:04,430] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 12:59:04,460] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-02 13:47:43,844] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.TSLA scheduled__2024-01-11T00:00:00+00:00 [queued]>
+[2024-04-02 13:47:44,243] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.TSLA scheduled__2024-01-11T00:00:00+00:00 [queued]>
+[2024-04-02 13:47:44,243] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 13:47:44,244] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 13:47:44,244] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 13:47:44,617] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): TSLA> on 2024-01-11 00:00:00+00:00
+[2024-04-02 13:47:45,094] {standard_task_runner.py:52} INFO - Started process 26928 to run task
+[2024-04-02 13:47:45,754] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'TSLA', 'scheduled__2024-01-11T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmpntlxsjfr', '--error-file', '/tmp/tmpbf9le7t2']
+[2024-04-02 13:47:45,782] {standard_task_runner.py:80} INFO - Job 13: Subtask TSLA
+[2024-04-02 13:47:55,966] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.TSLA scheduled__2024-01-11T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 13:50:02,037] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 259, in _do_get
+    return self._create_connection()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5432 failed: SSL SYSCALL error: EOF detected
+could not send startup packet: Connection reset by peer
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1451, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1558, in _execute_task_with_callbacks
+    RenderedTaskInstanceFields.write(rtif)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/models/renderedtifields.py", line 169, in write
+    session.merge(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2872, in merge
+    return self._merge(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2950, in _merge
+    merged = self.get(mapper.class_, key[1], identity_token=key[2])
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2695, in get
+    return self._get_impl(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2796, in _get_impl
+    return db_load_fn(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/loading.py", line 531, in load_on_pk_identity
+    session.execute(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1669, in execute
+    conn = self._connection_for_bind(bind, close_with_result=True)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1519, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 747, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3095, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 91, in __init__
+    else engine.raw_connection()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3174, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3144, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2003, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 259, in _do_get
+    return self._create_connection()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: SSL SYSCALL error: EOF detected
+could not send startup packet: Connection reset by peer
+
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2024-04-02 17:42:32,644] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.TSLA scheduled__2024-01-11T00:00:00+00:00 [queued]>
+[2024-04-02 17:42:32,661] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.TSLA scheduled__2024-01-11T00:00:00+00:00 [queued]>
+[2024-04-02 17:42:32,661] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:42:32,662] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 17:42:32,662] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:42:32,680] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): TSLA> on 2024-01-11 00:00:00+00:00
+[2024-04-02 17:42:32,686] {standard_task_runner.py:52} INFO - Started process 18779 to run task
+[2024-04-02 17:42:32,697] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'TSLA', 'scheduled__2024-01-11T00:00:00+00:00', '--job-id', '282', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmpn6zgs_zh', '--error-file', '/tmp/tmp8ducykzb']
+[2024-04-02 17:42:32,698] {standard_task_runner.py:80} INFO - Job 282: Subtask TSLA
+[2024-04-02 17:42:32,795] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.TSLA scheduled__2024-01-11T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 17:42:32,922] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=TSLA
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-11T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-11T00:00:00+00:00
+[2024-04-02 17:42:33,613] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 17:42:33,642] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_stocks_dag, task_id=TSLA, execution_date=20240111T000000, start_date=20240402T204232, end_date=20240402T204233
+[2024-04-02 17:42:33,675] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 17:42:33,833] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

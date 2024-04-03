@@ -1,0 +1,46 @@
+[2024-04-02 12:56:37,380] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-03T00:00:00+00:00 [queued]>
+[2024-04-02 12:56:37,389] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-03T00:00:00+00:00 [queued]>
+[2024-04-02 12:56:37,390] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 12:56:37,390] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 12:56:37,390] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 12:56:37,417] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): GOOG> on 2024-01-03 00:00:00+00:00
+[2024-04-02 12:56:37,426] {standard_task_runner.py:52} INFO - Started process 7913 to run task
+[2024-04-02 12:56:37,432] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'GOOG', 'scheduled__2024-01-03T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmp9c2krwrr', '--error-file', '/tmp/tmpr0bku88m']
+[2024-04-02 12:56:37,433] {standard_task_runner.py:80} INFO - Job 13: Subtask GOOG
+[2024-04-02 12:56:37,509] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-03T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 12:56:37,680] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=GOOG
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-03T00:00:00+00:00
+[2024-04-02 12:56:38,517] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 12:56:38,550] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_stocks_dag, task_id=GOOG, execution_date=20240103T000000, start_date=20240402T155637, end_date=20240402T155638
+[2024-04-02 12:56:38,610] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 12:56:38,645] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-02 17:41:40,778] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-03T00:00:00+00:00 [queued]>
+[2024-04-02 17:41:40,813] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-03T00:00:00+00:00 [queued]>
+[2024-04-02 17:41:40,815] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:41:40,818] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 17:41:40,819] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:41:40,848] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): GOOG> on 2024-01-03 00:00:00+00:00
+[2024-04-02 17:41:40,858] {standard_task_runner.py:52} INFO - Started process 17947 to run task
+[2024-04-02 17:41:40,875] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'GOOG', 'scheduled__2024-01-03T00:00:00+00:00', '--job-id', '258', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmpl619z_y9', '--error-file', '/tmp/tmp_da3jrjq']
+[2024-04-02 17:41:40,877] {standard_task_runner.py:80} INFO - Job 258: Subtask GOOG
+[2024-04-02 17:41:41,118] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-03T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 17:41:41,299] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=GOOG
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-03T00:00:00+00:00
+[2024-04-02 17:41:41,985] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 17:41:42,052] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_stocks_dag, task_id=GOOG, execution_date=20240103T000000, start_date=20240402T204140, end_date=20240402T204142
+[2024-04-02 17:41:42,112] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 17:41:42,236] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

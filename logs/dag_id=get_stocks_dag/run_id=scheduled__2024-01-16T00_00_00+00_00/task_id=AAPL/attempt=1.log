@@ -1,0 +1,120 @@
+[2024-04-02 12:59:43,728] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.AAPL scheduled__2024-01-16T00:00:00+00:00 [queued]>
+[2024-04-02 12:59:43,738] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.AAPL scheduled__2024-01-16T00:00:00+00:00 [queued]>
+[2024-04-02 12:59:43,739] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 12:59:43,739] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 12:59:43,740] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 12:59:43,765] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): AAPL> on 2024-01-16 00:00:00+00:00
+[2024-04-02 12:59:43,775] {standard_task_runner.py:52} INFO - Started process 8772 to run task
+[2024-04-02 12:59:43,780] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'AAPL', 'scheduled__2024-01-16T00:00:00+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmpjuk238c_', '--error-file', '/tmp/tmpr4v9__qn']
+[2024-04-02 12:59:43,782] {standard_task_runner.py:80} INFO - Job 47: Subtask AAPL
+[2024-04-02 12:59:43,840] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.AAPL scheduled__2024-01-16T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 12:59:43,935] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=AAPL
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-16T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-16T00:00:00+00:00
+[2024-04-02 12:59:44,595] {history.py:222} ERROR - AAPL: No price data found, symbol may be delisted (1h 2024-01-15 -> 2024-01-16)
+[2024-04-02 12:59:44,598] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 12:59:44,609] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_stocks_dag, task_id=AAPL, execution_date=20240116T000000, start_date=20240402T155943, end_date=20240402T155944
+[2024-04-02 12:59:44,641] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 12:59:44,667] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-02 17:17:03,270] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.AAPL scheduled__2024-01-16T00:00:00+00:00 [queued]>
+[2024-04-02 17:17:03,481] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.AAPL scheduled__2024-01-16T00:00:00+00:00 [queued]>
+[2024-04-02 17:17:03,481] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:17:03,481] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 17:17:03,482] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:17:03,586] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): AAPL> on 2024-01-16 00:00:00+00:00
+[2024-04-02 17:17:03,594] {standard_task_runner.py:52} INFO - Started process 4354 to run task
+[2024-04-02 17:17:03,743] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'AAPL', 'scheduled__2024-01-16T00:00:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmp271b901a', '--error-file', '/tmp/tmpk0m9f100']
+[2024-04-02 17:17:03,745] {standard_task_runner.py:80} INFO - Job 25: Subtask AAPL
+[2024-04-02 17:17:10,734] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.AAPL scheduled__2024-01-16T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 17:17:13,627] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=AAPL
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-16T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-16T00:00:00+00:00
+[2024-04-02 17:17:20,330] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/alexmend/Documents/airflowalex/dags/get_stocks.py", line 18, in get_history
+    yfinance.Ticker(ticker).history(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/utils.py", line 103, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/base.py", line 77, in history
+    return self._lazy_load_price_history().history(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/utils.py", line 103, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/scrapers/history.py", line 226, in history
+    logger.debug(f'{self.ticker}: yfinance received OHLC data: {quotes.index[0]} -> {quotes.index[-1]}')
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 5389, in __getitem__
+    return getitem(key)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/arrays/datetimelike.py", line 379, in __getitem__
+    result = cast("Union[Self, DTScalarOrNaT]", super().__getitem__(key))
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/arrays/_mixins.py", line 284, in __getitem__
+    result = self._ndarray[key]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+[2024-04-02 17:17:20,624] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=get_stocks_dag, task_id=AAPL, execution_date=20240116T000000, start_date=20240402T201703, end_date=20240402T201720
+[2024-04-02 17:17:20,777] {standard_task_runner.py:92} ERROR - Failed to execute job 25 for task AAPL (index 0 is out of bounds for axis 0 with size 0; 4354)
+[2024-04-02 17:17:21,158] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-04-02 17:17:21,560] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-02 17:42:46,400] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.AAPL scheduled__2024-01-16T00:00:00+00:00 [queued]>
+[2024-04-02 17:42:46,413] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.AAPL scheduled__2024-01-16T00:00:00+00:00 [queued]>
+[2024-04-02 17:42:46,413] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:42:46,413] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 17:42:46,413] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:42:46,428] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): AAPL> on 2024-01-16 00:00:00+00:00
+[2024-04-02 17:42:46,433] {standard_task_runner.py:52} INFO - Started process 19030 to run task
+[2024-04-02 17:42:46,443] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'AAPL', 'scheduled__2024-01-16T00:00:00+00:00', '--job-id', '292', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmpffyb5kqg', '--error-file', '/tmp/tmp7elli0ud']
+[2024-04-02 17:42:46,445] {standard_task_runner.py:80} INFO - Job 292: Subtask AAPL
+[2024-04-02 17:42:46,568] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.AAPL scheduled__2024-01-16T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 17:42:46,696] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=AAPL
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-16T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-16T00:00:00+00:00
+[2024-04-02 17:42:47,273] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/alexmend/Documents/airflowalex/dags/get_stocks.py", line 18, in get_history
+    yfinance.Ticker(ticker).history(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/utils.py", line 103, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/base.py", line 77, in history
+    return self._lazy_load_price_history().history(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/utils.py", line 103, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/scrapers/history.py", line 226, in history
+    logger.debug(f'{self.ticker}: yfinance received OHLC data: {quotes.index[0]} -> {quotes.index[-1]}')
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 5389, in __getitem__
+    return getitem(key)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/arrays/datetimelike.py", line 379, in __getitem__
+    result = cast("Union[Self, DTScalarOrNaT]", super().__getitem__(key))
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/arrays/_mixins.py", line 284, in __getitem__
+    result = self._ndarray[key]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+[2024-04-02 17:42:47,297] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=get_stocks_dag, task_id=AAPL, execution_date=20240116T000000, start_date=20240402T204246, end_date=20240402T204247
+[2024-04-02 17:42:47,315] {standard_task_runner.py:92} ERROR - Failed to execute job 292 for task AAPL (index 0 is out of bounds for axis 0 with size 0; 19030)
+[2024-04-02 17:42:47,336] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-04-02 17:42:47,408] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

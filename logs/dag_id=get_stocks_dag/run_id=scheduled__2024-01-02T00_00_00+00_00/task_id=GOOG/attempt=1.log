@@ -1,0 +1,72 @@
+[2024-04-02 12:56:15,008] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-04-02 12:56:15,019] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-04-02 12:56:15,019] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 12:56:15,019] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 12:56:15,019] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 12:56:15,041] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): GOOG> on 2024-01-02 00:00:00+00:00
+[2024-04-02 12:56:15,047] {standard_task_runner.py:52} INFO - Started process 7814 to run task
+[2024-04-02 12:56:15,056] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'GOOG', 'scheduled__2024-01-02T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmpojej0tko', '--error-file', '/tmp/tmpwzhtac05']
+[2024-04-02 12:56:15,057] {standard_task_runner.py:80} INFO - Job 9: Subtask GOOG
+[2024-04-02 12:56:15,162] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-02T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 12:56:15,266] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=GOOG
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-02T00:00:00+00:00
+[2024-04-02 12:56:16,138] {history.py:222} ERROR - GOOG: No price data found, symbol may be delisted (1h 2024-01-01 -> 2024-01-02)
+[2024-04-02 12:56:16,154] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 12:56:16,187] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_stocks_dag, task_id=GOOG, execution_date=20240102T000000, start_date=20240402T155615, end_date=20240402T155616
+[2024-04-02 12:56:16,285] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 12:56:16,331] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-02 17:41:33,675] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-04-02 17:41:33,704] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-04-02 17:41:33,704] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:41:33,705] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 17:41:33,706] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 17:41:33,731] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): GOOG> on 2024-01-02 00:00:00+00:00
+[2024-04-02 17:41:33,737] {standard_task_runner.py:52} INFO - Started process 17865 to run task
+[2024-04-02 17:41:33,744] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_stocks_dag', 'GOOG', 'scheduled__2024-01-02T00:00:00+00:00', '--job-id', '254', '--raw', '--subdir', 'DAGS_FOLDER/get_stocks.py', '--cfg-path', '/tmp/tmpdx95s5f7', '--error-file', '/tmp/tmpayaykdgu']
+[2024-04-02 17:41:33,747] {standard_task_runner.py:80} INFO - Job 254: Subtask GOOG
+[2024-04-02 17:41:33,887] {task_command.py:370} INFO - Running <TaskInstance: get_stocks_dag.GOOG scheduled__2024-01-02T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 17:41:34,063] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_stocks_dag
+AIRFLOW_CTX_TASK_ID=GOOG
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-01-02T00:00:00+00:00
+[2024-04-02 17:41:34,648] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/alexmend/Documents/airflowalex/dags/get_stocks.py", line 18, in get_history
+    yfinance.Ticker(ticker).history(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/utils.py", line 103, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/base.py", line 77, in history
+    return self._lazy_load_price_history().history(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/utils.py", line 103, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/yfinance/scrapers/history.py", line 226, in history
+    logger.debug(f'{self.ticker}: yfinance received OHLC data: {quotes.index[0]} -> {quotes.index[-1]}')
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 5389, in __getitem__
+    return getitem(key)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/arrays/datetimelike.py", line 379, in __getitem__
+    result = cast("Union[Self, DTScalarOrNaT]", super().__getitem__(key))
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/pandas/core/arrays/_mixins.py", line 284, in __getitem__
+    result = self._ndarray[key]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+[2024-04-02 17:41:34,679] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=get_stocks_dag, task_id=GOOG, execution_date=20240102T000000, start_date=20240402T204133, end_date=20240402T204134
+[2024-04-02 17:41:34,703] {standard_task_runner.py:92} ERROR - Failed to execute job 254 for task GOOG (index 0 is out of bounds for axis 0 with size 0; 17865)
+[2024-04-02 17:41:34,724] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-04-02 17:41:34,813] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

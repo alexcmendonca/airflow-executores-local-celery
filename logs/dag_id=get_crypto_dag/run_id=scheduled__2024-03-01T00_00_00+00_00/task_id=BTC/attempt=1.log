@@ -1,0 +1,48 @@
+[2024-04-02 21:46:07,145] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_crypto_dag.BTC scheduled__2024-03-01T00:00:00+00:00 [queued]>
+[2024-04-02 21:46:07,169] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_crypto_dag.BTC scheduled__2024-03-01T00:00:00+00:00 [queued]>
+[2024-04-02 21:46:07,170] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 21:46:07,170] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 21:46:07,170] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 21:46:07,194] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): BTC> on 2024-03-01 00:00:00+00:00
+[2024-04-02 21:46:07,208] {standard_task_runner.py:52} INFO - Started process 47936 to run task
+[2024-04-02 21:46:07,220] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_crypto_dag', 'BTC', 'scheduled__2024-03-01T00:00:00+00:00', '--job-id', '756', '--raw', '--subdir', 'DAGS_FOLDER/get_crypto.py', '--cfg-path', '/tmp/tmppbg11bse', '--error-file', '/tmp/tmpv5z6bzvo']
+[2024-04-02 21:46:07,222] {standard_task_runner.py:80} INFO - Job 756: Subtask BTC
+[2024-04-02 21:46:07,406] {task_command.py:370} INFO - Running <TaskInstance: get_crypto_dag.BTC scheduled__2024-03-01T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 21:46:07,598] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_crypto_dag
+AIRFLOW_CTX_TASK_ID=BTC
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-03-01T00:00:00+00:00
+[2024-04-02 21:46:08,243] {history.py:222} ERROR - BTC: No price data found, symbol may be delisted (1h 2024-02-29 -> 2024-03-01)
+[2024-04-02 21:46:18,266] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 21:46:18,366] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_crypto_dag, task_id=BTC, execution_date=20240301T000000, start_date=20240403T004607, end_date=20240403T004618
+[2024-04-02 21:46:18,556] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 21:46:18,942] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-02 22:50:40,642] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_crypto_dag.BTC scheduled__2024-03-01T00:00:00+00:00 [queued]>
+[2024-04-02 22:50:40,678] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_crypto_dag.BTC scheduled__2024-03-01T00:00:00+00:00 [queued]>
+[2024-04-02 22:50:40,680] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 22:50:40,680] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 22:50:40,680] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 22:50:40,731] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): BTC> on 2024-03-01 00:00:00+00:00
+[2024-04-02 22:50:40,749] {standard_task_runner.py:52} INFO - Started process 71171 to run task
+[2024-04-02 22:50:40,765] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_crypto_dag', 'BTC', 'scheduled__2024-03-01T00:00:00+00:00', '--job-id', '1000', '--raw', '--subdir', 'DAGS_FOLDER/get_crypto.py', '--cfg-path', '/tmp/tmpd9nowiuv', '--error-file', '/tmp/tmp056n7j9z']
+[2024-04-02 22:50:40,771] {standard_task_runner.py:80} INFO - Job 1000: Subtask BTC
+[2024-04-02 22:50:41,015] {task_command.py:370} INFO - Running <TaskInstance: get_crypto_dag.BTC scheduled__2024-03-01T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 22:50:41,347] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_crypto_dag
+AIRFLOW_CTX_TASK_ID=BTC
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-03-01T00:00:00+00:00
+[2024-04-02 22:50:42,032] {history.py:222} ERROR - BTC: No price data found, symbol may be delisted (1h 2024-02-29 -> 2024-03-01)
+[2024-04-02 22:50:52,065] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 22:50:52,132] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_crypto_dag, task_id=BTC, execution_date=20240301T000000, start_date=20240403T015040, end_date=20240403T015052
+[2024-04-02 22:50:52,305] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 22:50:52,398] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

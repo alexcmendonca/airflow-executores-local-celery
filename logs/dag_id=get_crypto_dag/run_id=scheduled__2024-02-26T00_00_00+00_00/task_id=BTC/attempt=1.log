@@ -1,0 +1,147 @@
+[2024-04-02 21:40:22,153] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_crypto_dag.BTC scheduled__2024-02-26T00:00:00+00:00 [queued]>
+[2024-04-02 21:40:22,282] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_crypto_dag.BTC scheduled__2024-02-26T00:00:00+00:00 [queued]>
+[2024-04-02 21:40:22,292] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 21:40:22,292] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 21:40:22,292] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 21:40:22,459] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): BTC> on 2024-02-26 00:00:00+00:00
+[2024-04-02 21:40:22,488] {standard_task_runner.py:52} INFO - Started process 45762 to run task
+[2024-04-02 21:40:22,624] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_crypto_dag', 'BTC', 'scheduled__2024-02-26T00:00:00+00:00', '--job-id', '720', '--raw', '--subdir', 'DAGS_FOLDER/get_crypto.py', '--cfg-path', '/tmp/tmpf420on_7', '--error-file', '/tmp/tmp_cw4qkp_']
+[2024-04-02 21:40:22,636] {standard_task_runner.py:80} INFO - Job 720: Subtask BTC
+[2024-04-02 21:40:25,917] {task_command.py:370} INFO - Running <TaskInstance: get_crypto_dag.BTC scheduled__2024-02-26T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 21:40:33,391] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_crypto_dag
+AIRFLOW_CTX_TASK_ID=BTC
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-26T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-02-26T00:00:00+00:00
+[2024-04-02 21:43:14,815] {base_job.py:229} ERROR - LocalTaskJob heartbeat got an exception
+Traceback (most recent call last):
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 259, in _do_get
+    return self._create_connection()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5432 failed: SSL SYSCALL error: EOF detected
+could not send startup packet: Connection reset by peer
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/airflow/jobs/base_job.py", line 201, in heartbeat
+    session.merge(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2872, in merge
+    return self._merge(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2950, in _merge
+    merged = self.get(mapper.class_, key[1], identity_token=key[2])
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2695, in get
+    return self._get_impl(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2796, in _get_impl
+    return db_load_fn(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/loading.py", line 531, in load_on_pk_identity
+    session.execute(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1669, in execute
+    conn = self._connection_for_bind(bind, close_with_result=True)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1519, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 747, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3095, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 91, in __init__
+    else engine.raw_connection()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3174, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3144, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2003, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 259, in _do_get
+    return self._create_connection()
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/alexmend/Documents/airflowalex/venv/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: SSL SYSCALL error: EOF detected
+could not send startup packet: Connection reset by peer
+
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2024-04-02 21:43:17,253] {history.py:222} ERROR - BTC: No price data found, symbol may be delisted (1h 2024-02-25 -> 2024-02-26)
+[2024-04-02 21:43:27,294] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 21:43:27,860] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_crypto_dag, task_id=BTC, execution_date=20240226T000000, start_date=20240403T004022, end_date=20240403T004327
+[2024-04-02 21:43:28,034] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 21:43:28,252] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-02 22:46:28,484] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_crypto_dag.BTC scheduled__2024-02-26T00:00:00+00:00 [queued]>
+[2024-04-02 22:46:28,518] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: get_crypto_dag.BTC scheduled__2024-02-26T00:00:00+00:00 [queued]>
+[2024-04-02 22:46:28,519] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 22:46:28,519] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-02 22:46:28,520] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-02 22:46:28,622] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): BTC> on 2024-02-26 00:00:00+00:00
+[2024-04-02 22:46:28,728] {standard_task_runner.py:52} INFO - Started process 68979 to run task
+[2024-04-02 22:46:28,745] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'get_crypto_dag', 'BTC', 'scheduled__2024-02-26T00:00:00+00:00', '--job-id', '972', '--raw', '--subdir', 'DAGS_FOLDER/get_crypto.py', '--cfg-path', '/tmp/tmpxr_wj14z', '--error-file', '/tmp/tmpopvobll7']
+[2024-04-02 22:46:28,749] {standard_task_runner.py:80} INFO - Job 972: Subtask BTC
+[2024-04-02 22:46:29,041] {task_command.py:370} INFO - Running <TaskInstance: get_crypto_dag.BTC scheduled__2024-02-26T00:00:00+00:00 [running]> on host alexmend-virtual-machine
+[2024-04-02 22:46:29,364] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=get_crypto_dag
+AIRFLOW_CTX_TASK_ID=BTC
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-26T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-02-26T00:00:00+00:00
+[2024-04-02 22:46:30,040] {history.py:222} ERROR - BTC: No price data found, symbol may be delisted (1h 2024-02-25 -> 2024-02-26)
+[2024-04-02 22:46:40,055] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-02 22:46:40,086] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=get_crypto_dag, task_id=BTC, execution_date=20240226T000000, start_date=20240403T014628, end_date=20240403T014640
+[2024-04-02 22:46:40,130] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-02 22:46:40,194] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
